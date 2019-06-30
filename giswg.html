@@ -25,16 +25,16 @@
    function komado(){
      if(ko!=1){
        ko=1; var el=document.getElementById("d"); 
-       el.outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1797 height=1200 src="/tankenMap/p2.png" style="position:relative;top:-11px;">'
+       el.outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1797 height=1200 src="tankenMap/p2.png" style="position:relative;top:-11px;">'
      }else{
        ko=2; var el=document.getElementById("d"); 
-       el.outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1801 height=1200 src="./tankenMap/p21.png" style="position:relative;top:-11px;left:-3px;">'
+       el.outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1801 height=1200 src="tankenMap/p21.png" style="position:relative;top:-11px;left:-3px;">'
      };
    };
    var addrdb=0;
-   $.get('../tankenMap/addr.geojson').done(function(data){addrdb=data});
+   $.get('tankenMap/addr.geojson').done(function(data){addrdb=data});
    var gakkodb=0;
-   $.get('../tankenMap/gakko.geojson').done(function(data){gakkodb=data});
+   $.get('tankenMap/gakko.geojson').done(function(data){gakkodb=data});
    document.getElementById("name").addEventListener('click', function(){
      if(document.getElementById('attmenu').style.visibility=="visible"){document.getElementById('attmenu').style.visibility="hidden";}else{
        var pr = document.getElementById("pref");
