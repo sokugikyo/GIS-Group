@@ -2,8 +2,6 @@
 
 2019/07/01
 ・
-* Add the activity to the `AndroidManifest.xml` file.
-
 2019/05/03
 ・下半分（小窓？）について、クリックで切替。複数パターン登録することで、全パターン表示可能
 ・学校検索で第1Key都道府県だとselect 2000以上になるので、第1Key市区町村とした
