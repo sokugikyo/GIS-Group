@@ -1,8 +1,9 @@
 ## 測技協GIS部会 自主研究 たんけんMAP
 
+### 更新履歴 
 #### 2019/06/30
-- sokugikyo/GIS-Groupとして公開します。
-
+- sokugikyo/GIS-Groupとして公開します。 https://sokugikyo.github.io/GIS-Group/giswg.html
+- 全体レイアウト及び小窓については未完。今後、順次更新する予定です。
 
 #### 2019/05/03
 - 下半分（小窓？）について、クリックで切替。複数パターン登録することで、全パターン表示可能
