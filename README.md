@@ -5,10 +5,10 @@
 * Add the activity to the `AndroidManifest.xml` file.
 
 2019/05/03
-・下半分（小窓？）について、クリックで切替。複数パターン登録することで、全パターン表示可能</br>
-・学校検索で第1Key都道府県だとselect 2000以上になるので、第1Key市区町村とした.
+・下半分（小窓？）について、クリックで切替。複数パターン登録することで、全パターン表示可能
+・学校検索で第1Key都道府県だとselect 2000以上になるので、第1Key市区町村とした
 　地区コードH30.10.01は総務省サイトより http://www.soumu.go.jp/denshijiti/code.html
-
+ 
 2019/05/01
 ・HTMLテキストから、イメージ（画像）に変更（※ルビー文字の入力＆編集、結構面倒なので）.
 ・GitHubで一時公開　URL　https://nishimurato.github.io/GIS-Group/giswg.html.
