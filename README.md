@@ -2,6 +2,7 @@
 
 2019/07/01
 ・
+* Add the activity to the `AndroidManifest.xml` file.
 
 2019/05/03
 ・下半分（小窓？）について、クリックで切替。複数パターン登録することで、全パターン表示可能</br>
