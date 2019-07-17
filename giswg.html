@@ -9,14 +9,14 @@
  </head>
  <body>
 <!--  <iframe id="frm" width="1104" height="800" src="https://maps.gsi.go.jp/?hc=hifc#10/35.787184/139.809265/&base=std&ls=std&disp=1&vs=c1j1h0k0l0u0t0z0r0s0m0f1" style="position:absolute;top:10px;left:10px;"></iframe> -->
-  <iframe id="frm" width="1104" height="800" src="https://maps.gsi.go.jp/?hc=hifc#10/35.787184/139.809265/&base=std&ls=std%7Cseamlessphoto&blend=0&disp=10&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=v" style="position:absolute;top:10px;left:10px;"></iframe>
-  <img width=1800 height=1200 src="tankenMap/p11.png">
-  <input type="image" alt="切替" id="d" onclick="komado()" width=1797 height=1200 src="tankenMap/p2.png" style="position:relative;top:-11px;">
-  <button id="name" style="position:absolute;top:12px;left:1199px;font-size:32px;background-color:orange;box-shadow:0 1px 3px;display:inline-flex;border-radius:6px;">名称</button>
-  <div id="attmenu" style="visibility:hidden;top:18px;left:450px;position:absolute;">
+  <iframe id="frm" width="1100" height="826" src="https://maps.gsi.go.jp/?hc=hifc#10/35.787184/139.809265/&base=std&ls=std%7Cseamlessphoto&blend=0&disp=10&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=v" style="position:absolute;top:60px;left:13px;z-index:100"></iframe>
+  <img width=1800 height=1200 src="../tankenMap/p11.png" style="position:absolute;top:55px;">
+  <input type="image" alt="切替" id="d" onclick="komado()" width=1797 height=1200 src="../tankenMap/p21.png" style="position:absolute;top:1260px;left:8px;">
+  <button id="name" style="position:absolute;top:62px;left:1204px;font-size:32px;background-color:orange;box-shadow:0 1px 3px;display:inline-flex;border-radius:6px;">名称</button>
+  <div id="attmenu" style="visibility:hidden;top:18px;left:1200px;position:absolute;width: 602px;">
    <div style="background:orange;padding:3px 4px 1px;">
-    <select id="pref" onchange="prefchange()" style="font-size:22px;"><option value="" >(市区町村)</option></select>
-    <select id="gakk" onchange="gakkochange()" style="font-size:22px;"><option value="">(学校名称)</option></select>
+    <select id="pref" onchange="prefchange()" style="font-size:22px;width:225px;"><option value="" >(市区町村)</option></select>
+    <select id="gakk" onchange="gakkochange()" style="font-size:22px;width:360px;"><option value="">(学校名称)</option></select>
    </div>
   </div>
 
@@ -25,16 +25,16 @@
    function komado(){
      if(ko!=1){
        ko=1; var el=document.getElementById("d"); 
-       el.outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1797 height=1200 src="tankenMap/p2.png" style="position:relative;top:-11px;">'
+       el.outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1797 height=1200 src="../tankenMap/p21.png" style="position:absolute;top:1260px;left:8px;">'
      }else{
        ko=2; var el=document.getElementById("d"); 
-       el.outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1801 height=1200 src="tankenMap/p21.png" style="position:relative;top:-11px;left:-3px;">'
+       el.outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1801 height=1200 src="../tankenMap/p21.png" style="position:absolute;top:1260px;left:8px;">'
      };
    };
    var addrdb=0;
-   $.get('tankenMap/addr.json').done(function(data){addrdb=data});
+   $.get('../tankenMap/addr.geojson').done(function(data){addrdb=data});
    var gakkodb=0;
-   $.get('tankenMap/gakko.json').done(function(data){gakkodb=data});
+   $.get('../tankenMap/gakko.geojson').done(function(data){gakkodb=data});
    document.getElementById("name").addEventListener('click', function(){
      if(document.getElementById('attmenu').style.visibility=="visible"){document.getElementById('attmenu').style.visibility="hidden";}else{
        var pr = document.getElementById("pref");
@@ -69,7 +69,7 @@
      var lat=gakkodb.features[$('#gakk').val()].geometry.coordinates[1];
      var lot=gakkodb.features[$('#gakk').val()].geometry.coordinates[0];
      var frame = document.getElementById("frm");
-     frame.src='https://maps.gsi.go.jp/?hc=hifc#17.52/'+lat+'/'+lot+'/&base=std&ls=std%7Cseamlessphoto&blend=0&disp=10&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=v';
+     frame.src='https://maps.gsi.go.jp/?hc=hifc#18.0/'+lat+'/'+lot+'/&base=std&ls=std%7Cseamlessphoto&blend=0&disp=10&vs=c1j0h0k0l0u0t0z0r0s0m0f1&d=v';
      document.getElementById('attmenu').style.visibility="hidden";
    }
   </script>
