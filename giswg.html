@@ -32,9 +32,9 @@
      };
    };
    var addrdb=0;
-   $.get('../tankenMap/addr.geojson').done(function(data){addrdb=data});
+   $.get('tankenMap/addr.geojson').done(function(data){addrdb=data});
    var gakkodb=0;
-   $.get('../tankenMap/gakko.geojson').done(function(data){gakkodb=data});
+   $.get('tankenMap/gakko.geojson').done(function(data){gakkodb=data});
    document.getElementById("name").addEventListener('click', function(){
      if(document.getElementById('attmenu').style.visibility=="visible"){document.getElementById('attmenu').style.visibility="hidden";}else{
        var pr = document.getElementById("pref");
