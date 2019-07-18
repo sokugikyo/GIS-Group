@@ -23,7 +23,7 @@
   <script>
    var ko=1;
    function komado(){
-    if     (ko==6){ko=1;document.getElementById("d").outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1797 height=1200 src="./tankenMap/p21.png" style="position:absolute;top:1260px;left:8px;">';
+    if     (ko==7){ko=1;document.getElementById("d").outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1797 height=1200 src="./tankenMap/p21.png" style="position:absolute;top:1260px;left:8px;">';
                         document.getElementById("a").outerHTML='<img id="a" width=1800 height=1200 src="./tankenMap/p11.png" style="position:absolute;top:55px;">';}
     else if(ko==1){ko=2;document.getElementById("d").outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1798 height=1200 src="./tankenMap/p22.png" style="position:absolute;top:1260px;left:8px;">';}
     else if(ko==2){ko=3;document.getElementById("d").outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1798 height=1200 src="./tankenMap/p23.png" style="position:absolute;top:1260px;left:8px;">';}
@@ -31,6 +31,8 @@
     else if(ko==4){ko=5;document.getElementById("d").outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1798 height=1200 src="./tankenMap/p25.png" style="position:absolute;top:1260px;left:8px;">';}
     else if(ko==5){ko=6;document.getElementById("d").outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1798 height=1200 src="./tankenMap/p26.png" style="position:absolute;top:1260px;left:8px;">';
                         document.getElementById("a").outerHTML='<img id="a" width=1800 height=1200 src="./tankenMap/p16.png" style="position:absolute;top:55px;">';}
+    else if(ko==6){ko=7;document.getElementById("d").outerHTML='<input type="image" alt="切替" id="d" onclick="komado()" width=1798 height=1200 src="./tankenMap/p27.png" style="position:absolute;top:1260px;left:8px;">';
+                        document.getElementById("a").outerHTML='<img id="a" width=1800 height=1200 src="./tankenMap/p17.png" style="position:absolute;top:55px;">';}
    };
    var addrdb=0;
    $.get('./tankenMap/addr.json').done(function(data){addrdb=data});
